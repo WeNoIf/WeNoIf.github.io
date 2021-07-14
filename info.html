@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"
+    />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="format-detection" content="email=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="renderer" content="webkit">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Amaze UI" />
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <title>一份简历</title>
+    <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="assets/css/typo.css">
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/index.css">
+</head>
+
+<body>
+
+    <header class="header"></header>
+
+    <article class="container">
+        <section class="side" id="side">
+
+            <!-- 左栏固定开关，记得及时删除这段代码 Start-->
+            <label class="switch" style="display: none;" onchange="switchFixed()">
+                <script type="text/javaScript">
+                    function switchFixed(){
+                        var value = document.getElementById('side').style.position === 'fixed' ? 'absolute' : 'fixed';
+                        document.getElementById('side').style.position = value;
+                    }
+                </script>
+                <input id="cb" type="checkbox">
+                <span class="slider round"></span>
+            </label>
+            <style>
+                @media (min-width: 	750px){
+                    .switch{position:relative;display:inline-block!important;width:60px;height:34px;}
+                    .switch input{display:none;}
+                    .slider{position:absolute;cursor:pointer;top:0;left:0;right:0;bottom:0;background-color:#ccc;-webkit-transition:.4s;transition:.4s;}
+                    .slider:before{position:absolute;content:"";height:26px;width:26px;left:4px;bottom:4px;background-color:white;-webkit-transition:.4s;transition:.4s;}
+                    input:checked + .slider{background-color:#1abc9c;}
+                    input:focus + .slider{box-shadow:0 0 1px #1abc9c;}
+                    input:checked + .slider:before{-webkit-transform:translateX(26px);-ms-transform:translateX(26px);transform:translateX(26px);}.slider.round{border-radius:34px;}
+                    .slider.round:before{border-radius:50%;}
+                }
+            </style>
+            <!-- 左侧固定开关，记得及时删除这段代码 End-->
+
+            <!-- 个人肖像 -->
+            <section class="me">
+                <section class="portrait">
+
+                    <!-- 头像照片 -->
+                    <img class="avatar" style="display:block;"  src="assets/images/avatar.jpg">
+                </section>
+
+                <h1 class="name"><b>一份简历</b></h1>
+                <!--
+                <h4 class="info-job">不愿公开姓名的小白不断成长中......</h4>
+                -->
+                <hr>
+                <h4 id="sentence"></h4>
+
+            </section>
+
+            <!-- 基本信息 -->
+            <section class="profile info-unit">
+                <h2>
+                    <i class="fa fa-user" aria-hidden="true"></i>基本信息</h2>
+                <hr/>
+                <ul>
+                    <li>
+                        <label>个人信息</label>
+                        <span>匿名 / 男 </span>
+                    </li>
+                    <li>
+                        <label>当前状态</label>
+                        <span>无业 / 学习中 </span>
+                    </li>
+                    <!--
+                    <li>
+                        <label>英语水平</label>
+                        <span>CET-6</span>
+                    </li>
+                    <li>
+                        <label>计算机水平</label>
+                        <span>软考中级</span>
+                    </li>
+                     -->
+                </ul>
+            </section>
+
+            <!-- 联系方式 -->
+            <section class="contact info-unit">
+                <h2>
+                    <i class="fa fa-phone" aria-hidden="true"></i>联系方式</h2>
+                <hr/>
+                <ul>
+                    <li>
+                        <label>手机</label>不愿公开
+                        <!-- 
+                        <a href="tel:12345678900" target="_blank">123-4567-8900</a>
+                         -->
+                    </li>
+                    <li>
+                        <label>邮箱</label>不愿公开
+                        <!-- 
+                        <a href="mailto:123@123.com" target="_blank">123@123.com</a>
+                        -->
+                    </li>
+                    <li>
+                        <label>个人主页</label>
+                        <a href="http://wenoif.github.io/" target="_blank">wenoif.github.io</a>
+                    </li>
+                    <li>
+                        <label>Github</label>
+                        <a href="https://github.com/wenoif" target="_blank">github.com/wenoif</a>
+                    </li>
+                </ul>
+            </section>
+
+            <!-- 技能点 -->
+            <section class="skill info-unit">
+                <h2>
+                    <i class="fa fa-code" aria-hidden="true"></i>技能掌握</h2>
+                <hr/>
+                学得越多，圆半径越大，知识盲区越多。
+                <ul>
+                    <li>
+                        <label>大后端</label>
+                        <progress value="5" max="100"></progress>&nbsp;5%
+                    </li>
+                    <li>
+                        <label>大前端</label>
+                        <progress value="3" max="100"></progress>&nbsp;3%
+                    </li>
+                    <li>
+                        <label>大软件</label>
+                        <progress value="3" max="100"></progress>&nbsp;3%
+                    </li>
+                    <li>
+                        <label>大硬件</label>
+                        <progress value="4" max="100"></progress>&nbsp;4%
+                    </li>
+                    <li>
+                        <label>瞎折腾</label>
+                        <progress value="65" max="100"></progress>&nbsp;65%
+                    </li>
+                    <li>
+                        <label>白日梦</label>
+                        <progress value="80" max="100"></progress>&nbsp;80%
+                    </li>
+                </ul>
+            </section>
+
+            <!-- 技术栈 -->
+            <!-- <div class="stack info-unit">
+                    <h2><i class="fa fa-code" aria-hidden="true"></i>其他</h2>
+                    <hr/>
+                    <ul>
+                        <li>
+                            <label>前端</label>
+                            <span>React、jQuery、微信小程序、Bootstrap、SASS、LESS</span>
+                        </li>
+                        <li>
+                            <label>后端</label>
+                            <span>Node.js、MySQL、MongoDB、WordPress、ThinkPHP</span>
+                        </li>
+                        <li>
+                            <label>其他</label>
+                            <span>Git、SVN、Markdown</span>
+                        </li>
+                    </ul>
+                </div> -->
+
+
+
+        </section>
+
+        <section class="main">
+
+            <!-- 教育经历 -->
+            <section class="edu info-unit">
+                <h2>
+                    <i class="fa fa-graduation-cap" aria-hidden="true"></i>教育经历</h2>
+                <hr/>
+                <ul>
+                    <li>
+                        <h3>
+                            <span>某高中</span>
+                            <time>2016.9-2019.7</time>
+                        </h3>
+                        <p>无重大违纪、无优异成绩</p>
+                    </li>
+                    <li>
+                        <h3>
+                            <span>某学院（专科）</span>
+                            <time>2019.9-2022.7</time>
+                        </h3>
+                        <p>无重大违纪、无优异成绩</p>
+                    </li>
+                </ul>
+            </section>
+
+            <!-- 工作经历 -->
+            <section class="work info-unit">
+                <h2>
+                    <i class="fa fa-shopping-bag" aria-hidden="true"></i>工作经历</h2>
+                <hr/>
+                <ul>
+                    暂时没有值得一提的打工经历
+                    <!--
+                    <li>
+                        <h3>
+                            <span>[经历1]XX公司－前端开发工程师（实习）</span>
+                            <time>2016.X 至 2017.X</time>
+                        </h3>
+                        <ul class="info-content">
+                            <li>深度参与XX项目迭代XX的前端开发工作，独立承担并完成XX、XX、XXXX等功能点的开发，主要维护并修复XX、XX、XX等功能点bug若干。项目采用技术栈
+                                <mark>React+React Router+Node.js+SASS</mark>，实现
+                                <mark>前后端完全分离</mark>。</li>
+                            <li>配合UI和后端，根据产品需求提供H5页面嵌入到后台模板，要求
+                                <mark>移动端显示正常</mark>。</li>
+                            <li>主要参与XXXXXXX的静态页面开发工作，要求
+                                <mark>在支付宝环境下完全兼容</mark>。</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h3>
+                            <span>[经历2]XX－前端开发工程师（实习）</span>
+                            <time>20XX.10-20XX.7</time>
+                        </h3>
+                        <ul class="info-content">
+                            <li>深度参与公司主线产品「XXXX」的前端开发工作，完成帖子快捷回复、
+                                <mark>全站图片懒加载</mark>、活动banner、帖子管理（使用Yii框架）等功能。项目采用技术栈phpWind+NAMP。
+                                <a href="http://itsay.tech/162/" target="_blank">
+                                    <i class="fa fa-link" aria-hidden="true"></i>博客文章</a>。</li>
+                            <li>主要参与公司产品「XXXX」的前端开发工作，实现接入微博、微信、QQ等
+                                <mark>第三方账号登录</mark>等功能。项目采用技术栈WordPress+NAMP。</li>
+                            <li>活动页面的开发（七夕活动、抽奖活动以及承接外包页面）。</li>
+                            <li>论坛
+                                <mark>图片增量备份</mark>（CentOS+vsftpd+crontab）
+                                <a href="#" target="_blank">
+                                    <i class="fa fa-link" aria-hidden="true"></i>博客文章</a>。</li>
+                        </ul>
+                    </li>
+                    -->
+                </ul>
+            </section>
+
+            <!-- 项目经验 -->
+            <section class="project info-unit">
+                <h2>
+                    <i class="fa fa-terminal" aria-hidden="true"></i>个人项目</h2>
+                <hr/>
+                <ul>
+                    暂时没有做出拿得出手的项目
+                    <!--
+                    <li>
+                        <h3>
+                            <span>[项目1]医学科学数据管理与共享平台</span>
+                            <span class="link">
+                                <a href="#" target="_blank">Demo</a>
+                            </span>
+                            <time>201X.X-201X.X</time>
+                        </h3>
+                        <ul class="info-content">
+                            <li>技术栈：ThinkPHP+MongoDB+Axure</li>
+                            <li>
+                                <i class="fa fa-paper-plane-o" aria-hidden="true"></i>
+                                [目标]实现多类型多来源医学科学数据的提交、管理和共享
+                                <br/>
+                                <i class="fa fa-users" aria-hidden="true"></i>
+                                [团队]同 2 位同专业同学一起
+                                <br/>
+                                <i class="fa fa-bars" aria-hidden="true"></i>
+                                [贡献]完成从
+                                <mark>“调研-设计-实现-文档”</mark>等工作，主要负责系统原型、功能框架及数据提交流程、元数据及源数据的管理与共享方案的设计以及系统开发等工作
+                                <br/>
+                                <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
+                                [效果]作品最终取得第三届共享杯国家级竞赛“一等奖” （2/2000）</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h3>
+                            <span>[项目2]肿瘤流行病数据可视化</span>
+                            <span class="link">
+                                <a href="#" target="_blank">Demo</a>
+                            </span>
+                            <time>201X.X-201X.X</time>
+                        </h3>
+                        <ul class="info-content">
+                            <li>技术栈：HTML 5+D3.js+ECharts+MySQL</li>
+                            <li>
+                                <i class="fa fa-paper-plane-o" aria-hidden="true"></i>
+                                [目标]实现常见肿瘤流行病数据多维度可视化展示、数据透视及分析
+                                <br/>
+                                <i class="fa fa-users" aria-hidden="true"></i>
+                                [团队]与 1 位同学
+                                <br/>
+                                <i class="fa fa-bars" aria-hidden="true"></i>
+                                [贡献]分析项目需求，清洗并整理相关数据(扩展第三方知识组织系统和 Google trends 数据)，并用
+                                <mark>D3.js</mark> 和
+                                <mark>ECharts</mark> 进行图形化展示以及实现简易自动分析 功能
+                                <br/>
+                                <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
+                                [效果]作品取得第二届共享杯国家级竞赛“特等奖”(1/1500)
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h3>
+                            <span>[项目3]肿瘤流行病数据可视化</span>
+                            <span class="link">
+                                <a href="#" target="_blank">Demo</a>
+                            </span>
+                            <time>201X.X-201X.X</time>
+                        </h3>
+                        <ul class="info-content">
+                            <li>技术栈：HTML 5+D3.js+ECharts+MySQL</li>
+                            <li>
+                                <i class="fa fa-paper-plane-o" aria-hidden="true"></i>
+                                [目标]实现常见肿瘤流行病数据多维度可视化展示、数据透视及分析
+                                <br/>
+                                <i class="fa fa-users" aria-hidden="true"></i>
+                                [团队]与 1 位同学
+                                <br/>
+                                <i class="fa fa-bars" aria-hidden="true"></i>
+                                [贡献]分析项目需求，清洗并整理相关数据(扩展第三方知识组织系统和 Google trends 数据)，并用
+                                <mark>D3.js</mark> 和
+                                <mark>ECharts</mark> 进行图形化展示以及实现简易自动分析功能
+                                <br/>
+                                <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
+                                [效果]作品取得第二届共享杯国家级竞赛“特等奖”(1/1500)
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h3>
+                            <span>[项目4]肿瘤流行病数据可视化</span>
+                            <span class="link">
+                                <a href="#" target="_blank">Demo</a>
+                            </span>
+                            <time>201X.X-201X.X</time>
+                        </h3>
+                        <ul class="info-content">
+                            <li>技术栈：HTML 5+D3.js+ECharts+MySQL</li>
+                            <li>
+                                <i class="fa fa-paper-plane-o" aria-hidden="true"></i>
+                                [目标]实现常见肿瘤流行病数据多维度可视化展示、数据透视及分析
+                                <br/>
+                                <i class="fa fa-users" aria-hidden="true"></i>
+                                [团队]与 1 位
+                                <br/>
+                                <i class="fa fa-bars" aria-hidden="true"></i>
+                                [贡献]分析项目需求，清洗并整理相关数据(扩展第三方知识组织系统和 Google trends 数据)，并用
+                                <mark>D3.js</mark> 和
+                                <mark>ECharts</mark> 进行图形化展示以及实现简易自动分析 功能
+                                <br/>
+                                <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
+                                [效果]作品取得第二届共享杯国家级竞赛“特等奖”(1/1500)
+                            </li>
+                        </ul>
+                    </li>
+                    -->
+                </ul>
+            </section>
+
+            <!-- 个人生活 -->
+            <section class="project info-unit">
+                <h2>
+                    <i class="fa fa-terminal" aria-hidden="true"></i>个人生活</h2>
+                <hr/>
+                <ul>
+                    <li>
+                        <label>读书:</label>
+                        <a href="https://wenoif.github.io/book" target="_blank">wenoif.github.io/book</a>&nbsp;&nbsp;(一张书单，读书笔记记录)
+
+                    </li>
+                    <li>
+                        <label>写作:</label>
+                        <a href="https://wenoif.github.io/blog" target="_blank">wenoif.github.io/blog</a>&nbsp;&nbsp;(一个博客，随便写写画画)
+                    </li>
+                    <li>
+                        <label>上网:</label>
+                        <a href="https://wenoif.github.io/go" target="_blank">wenoif.github.io/go&nbsp;&nbsp;&nbsp;</a>&nbsp;&nbsp;(一个导航，常用网址聚合)
+                    </li>
+                </ul>
+        </section>
+
+            <!-- 自我评价 -->
+            <section class="work info-unit">
+                <h2>
+                    <i class="fa fa-pencil" aria-hidden="true"></i>自我评价/期望</h2>
+                <hr/>
+                <p>站在巨人的肩膀引用<a href="./sentences.html" target="_blank">名人的话：</a></p><br>
+                <ul>
+                <li>
+                    “没有人可以回到过去重新开始, 但谁都可以从现在开始, 书写一个全然不同的结局!”
+                </li>
+                <li>
+                    “千万别以为自己可以逃避, 我们的每一步都决定着最后的结局, 我们的脚正在走向自己选定的终点。
+                    ——米兰.昆德拉 (作家)”
+                </li>
+                <li>
+                    “假如程序代码和注释不一致, 那么很可能两者都是错的!
+                    ——Norm Schryer”
+                </li>
+                <li>
+                    “世界上只有两种编程语言: 要么充满了抱怨; 要么没人使用。
+                    ——Bjarne Stroustrup (C++之父)”
+                </li>
+                <li>
+                    “投资的风险来自于: 你不知道你在做什么 :)
+                    ——巴菲特”
+                </li>
+            </ul>
+            </section>
+
+            <section class="qrcode info-unit">
+                <h2><i class="fa fa-qrcode" aria-hidden="true"></i>保存简历</h2>
+                <hr/>
+                <div style="text-align: center;">
+                    <img src="assets/images/code.png" style="width: 65%;" alt="本页面二维码">
+                    <br>（截图保存我的在线简历）
+                    <h2>感谢您的浏览，期待能够加入贵公司！</h2>
+                </div>
+                
+            </section>
+
+            
+        </section>
+    </article>
+
+
+
+    <footer class="footer">
+        <p>基于<a href="https://gitee.com/itsay/resume" target="_blank">itsay</a>
+            --未经允许禁止转载--
+            UP&nbsp;<time>2021-07</time>
+        </p>
+    </footer>
+
+    
+    <!-- 侧栏 -->
+    <!-- 
+    <aside>
+        <ul>
+            <li>
+                <a href="https://gitee.com/itsay/resume" target="_blank">源代码</a>
+            </li>
+            <li>
+                <a href="http://if2er.com/" target="_blank">Blog</a>
+            </li>
+        </ul>
+    </aside>
+    -->
+    
+    <script src="./assets/js/index.js"></script>
+    <script src="./assets/js/sentences.js"></script>
+</body>
+
+</html>
