@@ -1,3 +1,4 @@
+
 @charset "UTF-8";
 /* -------------------------------------------------
  * 公共部分
@@ -250,3 +251,13 @@ mark {
     display: none; } }
 
 /*# sourceMappingURL=index.css.map */
+
+/*去除a标签颜色*/
+a,a:hover,a:active,a:visited,a:link,a:focus{
+  -webkit-tap-highlight-color:rgba(0,0,0,0);
+  -webkit-tap-highlight-color: transparent;
+  outline:none;
+  background: none;
+  text-decoration: none;
+  color:#333;
+  }
